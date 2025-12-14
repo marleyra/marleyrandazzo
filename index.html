@@ -12,28 +12,33 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
+            color: #000;
+            background-color: #fff;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'DIN Pro', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 500;
         }
 
         header {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            color: white;
+            background: #fff;
+            color: #000;
             padding: 60px 20px;
             text-align: center;
+            border-bottom: 2px solid #000;
         }
 
         header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
-            font-weight: 300;
+            font-weight: 500;
         }
 
         header p {
             font-size: 1.2em;
-            opacity: 0.9;
             margin-bottom: 20px;
         }
 
@@ -46,23 +51,23 @@
         }
 
         .social-links a {
-            color: white;
+            color: #000;
             text-decoration: none;
             padding: 10px 20px;
-            border: 2px solid white;
-            border-radius: 5px;
+            border: 2px solid #000;
+            border-radius: 0;
             transition: all 0.3s;
             font-size: 0.9em;
         }
 
         .social-links a:hover {
-            background: white;
-            color: #2c3e50;
+            background: #000;
+            color: #fff;
         }
 
         nav {
-            background: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: #fff;
+            border-bottom: 1px solid #000;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -82,13 +87,13 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #2c3e50;
+            color: #000;
             font-weight: 500;
-            transition: color 0.3s;
+            transition: opacity 0.3s;
         }
 
         nav ul li a:hover {
-            color: #3498db;
+            opacity: 0.6;
         }
 
         .container {
@@ -98,19 +103,18 @@
         }
 
         section {
-            background: white;
+            background: #fff;
             margin-bottom: 30px;
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid #000;
         }
 
         section h2 {
-            color: #2c3e50;
+            color: #000;
             font-size: 2em;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 3px solid #3498db;
+            border-bottom: 2px solid #000;
         }
 
         .bio-section {
@@ -124,12 +128,13 @@
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            background: #ddd;
+            background: #fff;
+            border: 2px solid #000;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 4em;
-            color: #2c3e50;
+            color: #000;
             flex-shrink: 0;
         }
 
@@ -146,7 +151,7 @@
         .publication {
             margin-bottom: 20px;
             padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #000;
         }
 
         .publication:last-child {
@@ -154,23 +159,23 @@
         }
 
         .publication h3 {
-            color: #2c3e50;
+            color: #000;
             font-size: 1.1em;
             margin-bottom: 5px;
         }
 
         .publication p {
-            color: #666;
+            color: #000;
             font-size: 0.95em;
         }
 
         .publication a {
-            color: #3498db;
-            text-decoration: none;
+            color: #000;
+            text-decoration: underline;
         }
 
         .publication a:hover {
-            text-decoration: underline;
+            opacity: 0.6;
         }
 
         .research-interests {
@@ -181,33 +186,33 @@
         }
 
         .interest-tag {
-            background: #ecf0f1;
+            background: #fff;
             padding: 8px 15px;
-            border-radius: 20px;
+            border: 1px solid #000;
             font-size: 0.9em;
-            color: #2c3e50;
+            color: #000;
         }
 
         .cv-download {
             display: inline-block;
-            background: #3498db;
-            color: white;
+            background: #000;
+            color: #fff;
             padding: 15px 30px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 0;
             font-weight: 500;
-            transition: background 0.3s;
+            transition: opacity 0.3s;
             margin-top: 20px;
         }
 
         .cv-download:hover {
-            background: #2980b9;
+            opacity: 0.8;
         }
 
         .contact-info {
-            background: #ecf0f1;
+            background: #fff;
             padding: 20px;
-            border-radius: 5px;
+            border: 1px solid #000;
             margin-top: 20px;
         }
 
@@ -216,20 +221,21 @@
         }
 
         .contact-info a {
-            color: #2c3e50;
-            text-decoration: none;
+            color: #000;
+            text-decoration: underline;
         }
 
         .contact-info a:hover {
-            color: #3498db;
+            opacity: 0.6;
         }
 
         footer {
-            background: #2c3e50;
-            color: white;
+            background: #fff;
+            color: #000;
             text-align: center;
             padding: 20px;
             margin-top: 40px;
+            border-top: 2px solid #000;
         }
 
         @media (max-width: 768px) {
@@ -344,7 +350,7 @@
             <h2>Curriculum Vitae</h2>
             <p>For a complete overview of my academic background, research experience, teaching, and service activities, please download my CV.</p>
             <a href="#" class="cv-download">Download CV (PDF)</a>
-            <p style="margin-top: 15px; color: #666; font-size: 0.9em;"><em>Last updated: December 2025</em></p>
+            <p style="margin-top: 15px; color: #000; font-size: 0.9em;"><em>Last updated: December 2025</em></p>
         </section>
 
         <section id="contact">

@@ -8,8 +8,6 @@
         * {
             margin: 0;
             box-sizing: border-box;
-            background-color: #EAEAF2;
-            line-height: 1.4;
         }
 
         body {
@@ -17,13 +15,18 @@
             line-height: 1.6;
             color: #000;
             padding: 40px 20px;
+            background-color: #EAEAF2;
+            background-image: 
+                radial-gradient(circle, #d0d0d0 1.5px, transparent 1.5px);
+            background-size: 30px 30px;
         }
 
         h1 {
             font-family: 'DIN Pro', 'Arial Narrow', Arial, sans-serif;
-            font-weight: 400;
-            font-size: 32px;
-            margin-bottom: 40px;
+            font-weight: 500;
+            font-size: 34px;
+            margin-bottom: 30px;
+            text-align: left;
         }
 
         .container {
@@ -36,13 +39,14 @@
             height: 200px;
             border-radius: 50%;
             background: #fff;
-            border: 2px solid #000;
+            border: 3px solid #000;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 4em;
             color: #000;
             margin-bottom: 40px;
+            margin-left: 10px;
         }
 
         .bio {
@@ -64,15 +68,30 @@
         .links a {
             color: #000;
             text-decoration: none;
+            font-family: 'DIN Pro', 'Arial Narrow', Arial, sans-serif;
             padding: 12px 24px;
             border: 1px solid #000;
             transition: all 0.3s;
             font-size: 14px;
+            font-weight: 450;
         }
 
-        .links a:hover {
-            background: #000;
-            color: #fff;
+        .links a:nth-child(1):hover {
+            background-color: #1f77b4; /* C0 - blue */
+            color: white;
+            border-color: #1f77b4;
+        }
+
+        .links a:nth-child(2):hover {
+        background-color: #ff7f0e; /* C1 - orange */
+        color: white;
+        border-color: #ff7f0e;
+        }
+
+        .links a:nth-child(3):hover {
+            background-color: #2ca02c; /* C2 - green */
+            color: white;
+            border-color: #2ca02c;
         }
 
         @media (max-width: 600px) {
@@ -99,18 +118,39 @@
         <img src="https://github.com/marleyra.png" alt="Marley Randazzo" class="profile-image" style="object-fit: cover;">
                 
         <div class="bio">
-            <p>PhD Candidate in Urban Planning & Development at the University of Southern California.<br>
-               My research investigates how technology impacts urban development and spatial organization.</p>
+            <p>PhD Candidate in Urban Planning & Development at the University of Southern California, Sol Price School of Public Policy.</p>
+            
+            <p>My research investigates technology's impacts on urban development and spatial organization.</p>
+        
         </div>
 
         <div class="email">
-            <a href="mailto:marleyra@usc.edu" style="color: #000; text-decoration: underline;">marleyra@usc.edu</a><br>
-            <a href="mailto:marleyrandazzo@gmail.com" style="color: #000; text-decoration: underline;">marleyrandazzo@gmail.com</a>
+            <a href="#" onclick="copyEmail('marleyra@usc.edu'); return false;" style="color: #000; text-decoration: underline; cursor: pointer;">marleyra@usc.edu</a><br>
         </div>
+
+        <!-- Toast notification -->
+        <div id="toast" style="position: fixed; bottom: 20px; right: 20px; background: #333; color: white; padding: 15px 20px; border-radius: 5px; display: none; z-index: 1000;">
+            Email copied!
+        </div>
+
+        <script>
+        function copyEmail(email) {
+            navigator.clipboard.writeText(email).then(function() {
+                // Show toast notification
+                const toast = document.getElementById('toast');
+                toast.style.display = 'block';
+        
+                // Hide after 2 seconds
+                setTimeout(function() {
+                    toast.style.display = 'none';
+                }, 2000);
+            });
+        }
+        </script>
                   
         <div class="links">
             <a href="#research">Research</a>
-            <a href="Randazzo_CV.pdf" target="_blank">CV</a>
+            <a href="MarleyRandazzo_CV.pdf" target="_blank">CV</a>
             <a href="https://scholar.google.com/citations?user=kLEShdEAAAAJ&hl=en" target="_blank">Google Scholar</a>
         </div>
     </div>

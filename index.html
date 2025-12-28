@@ -29,6 +29,24 @@
             text-align: left;
         }
 
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            margin: 0; /* override existing h1 margin */
+            line-height: 1.33;
+            position: relative;
+            top: -.4em;
+        }
+
+        .profile-image {
+            margin-bottom: 0; /* remove vertical spacing */
+        }
+
         .container {
             max-width: 700px;
             margin: 0 auto;
@@ -113,10 +131,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>Marley Randazzo</h1>
-        
-        <img src="https://github.com/marleyra.png" alt="Marley Randazzo" class="profile-image" style="object-fit: cover;">
-                
+        <div class="header">
+            <img src="https://github.com/marleyra.png" alt="Marley Randazzo" class="profile-image" style="object-fit: cover;">
+            <h1>Marley<br>Randazzo</h1>
+        </div>
+
         <div class="bio">
             <p>I am a PhD Candidate in Urban Planning & Development at the University of Southern California, Sol Price School of 
                Public Policy.</p>

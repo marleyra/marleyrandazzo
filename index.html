@@ -41,7 +41,6 @@
             margin: 0; /* override existing h1 margin */
             line-height: 1.33;
             position: relative;
-            top: -.4em;
         }
 
         .profile-image {
@@ -114,20 +113,46 @@
         }
 
         @media (max-width: 600px) {
+            body {
+                padding: 24px 16px;
+            }
+
             h1 {
-                font-size: 2em;
+                font-size: 32px;
+                padding-left: 12px;
+            }
+
+            .header {
+                gap: 16px;
+                margin-bottom: 36px;
             }
 
             .profile-image {
-                width: 150px;
-                height: 150px;
+                width: 140px;
+                height: 140px;
                 font-size: 3em;
+                margin-bottom: 0;
+                margin-left: 0;
             }
             
             .bio {
-                font-size: 1em;
+                margin-bottom: 16px;
+            }
+
+            .email {
+                margin-bottom: 28px;
+            }
+
+            .links {
+                gap: 12px;
+            }
+
+            .links a {
+                padding: 10px 18px;
+                font-size: 13px;
             }
         }
+
     </style>
     <script type="application/ld+json">
     {
@@ -157,7 +182,7 @@
         </div>
 
         <div class="bio">
-            <p>I am Marley Randazzo, a PhD Candidate in Urban Planning & Development at the University of Southern California, Sol Price School of 
+            <p>I'm Marley Randazzo, a PhD Candidate in Urban Planning & Development at the University of Southern California, Sol Price School of 
                Public Policy.</p>
             <br>
             <p>My work explores how technology impacts urban development and spatial organization by altering the human behaviors that shape the built environment.

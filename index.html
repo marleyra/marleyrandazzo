@@ -16,6 +16,9 @@
     <meta name="description" content="Marley Randazzo is an economist and researcher. Personal website with bio, CV, publications, and research.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -27,14 +30,20 @@
             line-height: 1.6;
             color: #000;
             padding: 40px 20px;
+            background: transparent;
+        }
+
+        .bg {
+            position: fixed;
+            inset: 0;
             background-color: #EAEAF2;
-            background-image: 
-                radial-gradient(circle, #d0d0d0 1.5px, transparent 1.5px);
+            background-image: radial-gradient(circle, #d0d0d0 1.5px, transparent 1.5px);
             background-size: 30px 30px;
+            z-index: 0;
         }
 
         h1 {
-            font-family: 'DIN Pro', 'Arial Narrow', Arial, sans-serif;
+            font-family: 'DIN Pro', 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
             font-weight: 700;
             font-size: 44px;
             margin-bottom: 30px;
@@ -61,6 +70,8 @@
         .container {
             max-width: 700px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .profile-image {
@@ -97,7 +108,7 @@
         .links a {
             color: #000;
             text-decoration: none;
-            font-family: 'DIN Pro', 'Arial Narrow', Arial, sans-serif;
+            font-family: 'DIN Pro', 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
             padding: 12px 24px;
             border: 1px solid #000;
             transition: all 0.3s;
@@ -186,6 +197,7 @@
     </script>
 </head>
 <body>
+    <div class="bg" aria-hidden="true"></div>
     <div class="container">
         <div class="header">
             <img src="profile.jpg" alt="Marley Randazzo" class="profile-image" style="object-fit: cover;">
@@ -196,7 +208,7 @@
             <p>I’m Marley Randazzo, a PhD Candidate in Urban Planning & Development at the University of Southern California, Sol Price School of 
                Public Policy.</p>
             <br>
-            <p style="font-style: italic;"> I made a game! <a href="https://msadle.vercel.app" style="color: #1f77b4;">Play MSAdle here</a>: a Wordle-style guessing game where you identify U.S. metro areas 
+            <p style="font-style: italic;"> I made a game: <a href="https://msadle.vercel.app" style="color: #1f77b4;">play MSAdle here</a>, a Wordle-style guessing game where you identify U.S. metro areas 
                by their industry employment patterns. It's designed to be a teaching tool, gamifying employment data and illuminating the patterns behind 
                regional specialization.</p>
             <br>
@@ -245,5 +257,11 @@
             <a href="https://scholar.google.com/citations?user=kLEShdEAAAAJ&hl=en" target="_blank">Google Scholar</a>
         </div>
     </div>
+    <script>
+        const bg = document.querySelector('.bg');
+        window.addEventListener('scroll', () => {
+            bg.style.backgroundPositionY = -(window.scrollY * 0.35) + 'px';
+        }, { passive: true });
+    </script>
 </body>
 </html>
